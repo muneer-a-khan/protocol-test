@@ -36,7 +36,7 @@
 			"text": "Unenroll",
 			"icon": "/assets/menu_unenroll.png",
 			"action": "flow://scripts/flows/unenroll.json"
-		}
+		},
 		"custom": [
 			{
 				"text": "",
