@@ -1,0 +1,25 @@
+{
+    "title": "Text Entry",
+    "elements": [
+		{
+			"type":"Text",
+			"text":"Without Other Options"
+		},
+        {
+            "type": "Slider",
+			"minimum": 1,
+			"maximum": 7
+        }
+		{
+			"type":"Text",
+			"text":"With Other Choices"
+		},
+        {
+            "type": "Slider",
+			"minimum": 1,
+			"maximum": 7,
+			"other_choices": ["a","b","c"]
+        },
+
+    ]
+}

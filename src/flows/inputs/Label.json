@@ -1,0 +1,9 @@
+{
+    "title": "Label Text",
+    "elements": [
+        {
+            "type": "Label",
+            "text": "This is a label"
+        }
+    ]
+}
