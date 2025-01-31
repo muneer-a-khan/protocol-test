@@ -5,9 +5,10 @@ This repository contains a test protocol demoing a number of Digital Trail featu
 
 ## Downloading This Repo's Protocol in Digital Trails
 
-This protocol can be downloaded in the Digital Trails app using the study code "MTS" on the initial startup screen.
+This protocol can be downloaded in the Digital Trails app using the study code "test" on the initial startup screen.
 
-![image](https://github.com/user-attachments/assets/0990aa18-6523-4728-bcb5-38b9b3f67e3f)
+![image](https://github.com/user-attachments/assets/1e2f4411-745a-475b-b9f3-dc714ea5b42a)
+
 
 <br>
 
@@ -49,6 +50,7 @@ In addition to releasing a primary protocol (downloaded with MTS study code) it 
 
 2. In Digital Trails enter your study code followed by an @ plus your release tag. For example, if your release tag was `1.0-beta` you'd enter:
 
-   ![image](https://github.com/user-attachments/assets/0d09ef11-9523-421d-87ae-8f66a916f4bf)
+   ![image](https://github.com/user-attachments/assets/db0020ec-3f76-4049-a07c-baeb7512933f)
+
 
 3. You can have as many release versions as you want, but only one "latest release". The "latest release" is always the default download.
