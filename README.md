@@ -50,7 +50,6 @@ In addition to releasing a primary protocol (downloaded with MTS study code) it 
 
 2. In Digital Trails enter your study code followed by an @ plus your release tag. For example, if your release tag was `1.0-beta` you'd enter:
 
-   ![image](https://github.com/user-attachments/assets/db0020ec-3f76-4049-a07c-baeb7512933f)
-
+   ![image](https://github.com/user-attachments/assets/340d530a-83da-4795-8e32-cd5d4aa78597)
 
 3. You can have as many release versions as you want, but only one "latest release". The "latest release" is always the default download.
