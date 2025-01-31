@@ -6,7 +6,7 @@
 			"text":"Default Height"
 		},
         {
-            "type": "Entry",
+            "type": "Entry"
         },
 		{
 			"type":"Text",

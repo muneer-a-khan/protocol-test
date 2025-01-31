@@ -9,7 +9,7 @@
             "type": "Slider",
 			"minimum": 1,
 			"maximum": 7
-        }
+        },
 		{
 			"type":"Text",
 			"text":"With Other Choices"
@@ -19,7 +19,6 @@
 			"minimum": 1,
 			"maximum": 7,
 			"other_choices": ["a","b","c"]
-        },
-
+        }
     ]
 }
