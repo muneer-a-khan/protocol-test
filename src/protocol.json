@@ -9,7 +9,7 @@
 		"button_tl": {
 			"text": "",
 			"icon": "/assets/home_mindtrails.png",
-			"action": ""
+			"action": "flow://flows/Inputs"
 		},
 		"button_tr": {
 			"text": "",
