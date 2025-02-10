@@ -42,7 +42,7 @@
 			"type": "timing",
 			"action": "notification",
 			"content": "flow://flows/survey1",
-			"frequency": "00:00:05"
+			"frequency": "00:05:00"
 		},
 		{
 			"type": "timing",
