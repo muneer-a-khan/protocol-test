@@ -36,20 +36,19 @@
 			"text": "Unenroll",
 			"icon": "/assets/menu_unenroll.png",
 		}
-	}
-
+	},
 	"triggers": [
 		{
 			"type": "timing",
 			"action": "notification",
 			"content": "flow://flows/survey1",
-			"frequency": "00:00:05",
+			"frequency": "00:00:05"
 		},
 		{
 			"type": "timing",
 			"action": "notification",
 			"content": "flow://flows/survey2",
-			"frequency": "01:00:00",
+			"frequency": "01:00:00"
 		},
 		{
 			"type": "timing",
