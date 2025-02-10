@@ -14,17 +14,17 @@
 		"button_tr": {
 			"text": "",
 			"icon": "/assets/home_instructions.png",
-			"action": ""
+			"action": "flow://flows/inputs"
 		},
 		"button_br": {
 			"text": "",
 			"icon": "/assets/home_resources.png",
-			"action": ""
+			"action": "flow://flows/inputs"
 		},
 		"button_bl": {
 			"text": "",
 			"icon": "/assets/home_anxiety.png",
-			"action": ""
+			"action": "flow://flows/inputs"
 		}
 	},
 	"menu": {
@@ -35,7 +35,6 @@
 		"unenroll": {
 			"text": "Unenroll",
 			"icon": "/assets/menu_unenroll.png",
-			"action": "flow://scripts/flows/unenroll.json"
 		}
 	}
 }
