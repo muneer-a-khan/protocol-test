@@ -7,7 +7,7 @@
 		},
         {
             "type": "Picker",
-            "options": [
+            "items": [
 				"Option 1",
 			]
         },
@@ -17,7 +17,7 @@
 		},
         {
             "type": "Picker",
-            "options": [
+            "items": [
 				"Option 1",
 				"Option 2"
 			]
@@ -28,7 +28,7 @@
 		},
         {
             "type": "Picker",
-            "options": [
+            "items": [
 				"Option 1",
 				"Option 2",
 				"Option 3"
