@@ -7,24 +7,24 @@
 		"banner_text_2": "Feel Less Anxious.",
 		"banner_icon": "/assets/home_banner.png",
 		"button_tl": {
-			"text": "",
+			"text": "inputs",
 			"icon": "/assets/home_mindtrails.png",
 			"action": "flow://flows/inputs"
 		},
 		"button_tr": {
-			"text": "",
+			"text": "survey 1",
 			"icon": "/assets/home_instructions.png",
-			"action": "flow://flows/inputs"
+			"action": "flow://flows/survey1"
 		},
 		"button_br": {
-			"text": "",
+			"text": "survey 2",
 			"icon": "/assets/home_resources.png",
-			"action": "flow://flows/inputs"
+			"action": "flow://flows/survey2"
 		},
 		"button_bl": {
-			"text": "",
+			"text": "survey 3",
 			"icon": "/assets/home_anxiety.png",
-			"action": "flow://flows/inputs"
+			"action": "flow://flows/survey3"
 		}
 	},
 	"menu": {
