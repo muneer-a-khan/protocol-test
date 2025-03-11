@@ -1,61 +1,70 @@
 {
-	"datums_endpoint": "https://digital-trails.org/api/v1/datums",
-	"icon": "/assets/home_mindtrails.png",
-	"home": {
-		"title": "MindTrails",
-		"banner_text": "Understand Your Thinking. Feel Less Anxious.",
-		"banner_icon": "/assets/home_banner.png",
-		"button_tl": {
-			"text": "inputs",
-			"icon": "/assets/home_mindtrails.png",
-			"action": "flow://flows/inputs"
-		},
-		"button_tr": {
-			"text": "survey 1",
-			"icon": "/assets/home_instructions.png",
-			"action": "flow://flows/survey1"
-		},
-		"button_br": {
-			"text": "survey 2",
-			"icon": "/assets/home_resources.png",
-			"action": "flow://flows/survey2"
-		},
-		"button_bl": {
-			"text": "survey 3",
-			"icon": "/assets/home_anxiety.png",
-			"action": "flow://flows/survey3"
-		}
-	},
-	"sessions": "flow://flows/inputs",
-	"menu": {
-		"home": {
-			"text": "Home",
-			"icon": "/assets/menu_home.png"
-		},
-		"unenroll": {
-			"text": "Unenroll",
-			"icon": "/assets/menu_unenroll.png",
-		}
-	},
-	"triggers": [
-		{
-			"type": "timing",
-			"action": "notification",
-			"content": "flow://flows/survey1",
-			"frequency": "00:05:00"
-		},
-		{
-			"type": "timing",
-			"action": "notification",
-			"content": "flow://flows/survey2",
-			"frequency": "01:00:00"
-		},
-		{
-			"type": "timing",
-			"action": "notification",
-			"content": "flow://flows/survey3",
-			"frequency": "1",
-			"time": "08:00"
-		}
-	]
+  "datums_endpoint": "https://digital-trails.org/api/v1/datums",
+  "icon": "/assets/home_mindtrails.png",
+  "home": {
+    "title": "MindTrails",
+    "banner_text": "Understand Your Thinking. Feel Less Anxious.",
+    "banner_icon": "/assets/home_banner.png",
+    "button_tl": {
+      "text": "inputs",
+      "icon": "/assets/home_mindtrails.png",
+      "action": "flow://flows/inputs"
+    },
+    "button_tr": {
+      "text": "survey 1",
+      "icon": "/assets/home_instructions.png",
+      "action": "flow://flows/survey1"
+    },
+    "button_br": {
+      "text": "survey 2",
+      "icon": "/assets/home_resources.png",
+      "action": "flow://flows/survey2"
+    },
+    "button_bl": {
+      "text": "survey 3",
+      "icon": "/assets/home_anxiety.png",
+      "action": "flow://flows/survey3"
+    }
+  },
+  "sessions": "flow://flows/inputs",
+  "menu": {
+    "home": {
+      "text": "Home",
+      "icon": "/assets/menu_home.png"
+    },
+    "unenroll": {
+      "text": "Unenroll",
+      "icon": "/assets/menu_unenroll.png",
+      
+    }
+  },
+  "triggers": [
+    {
+      "type": "timing",
+      "action": "notification",
+      "content": "flow://flows/survey1",
+      "frequency": "00:05:00"
+    },
+    {
+      "type": "timing",
+      "action": "notification",
+      "content": "flow://flows/survey2",
+      "frequency": "01:00:00"
+    },
+    {
+      "type": "timing",
+      "action": "notification",
+      "content": "flow://flows/survey3",
+      "frequency": "1",
+      "time": "08:00"
+    }
+  ],
+  "probes": [
+    {
+      "type": "Location",
+      "optional": true,
+      "interval": "00:00:01",
+      "accuracy": 5
+    }
+  ]
 }
