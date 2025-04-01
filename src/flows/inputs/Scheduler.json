@@ -4,7 +4,8 @@
         {
             "type": "Scheduler",
             "message": "This is a scheduler",
-            "name": "schedule_session"
+            "days_ahead": 1,
+            "action": "flow://flows/survey1"
         }
     ]
 }
