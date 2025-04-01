@@ -40,13 +40,6 @@
       "icon": "/assets/menu_home.png"
     }
   ],
-  "settings": {
-    "unenroll": {
-      "text": "Unenroll",
-      "icon": "/assets/menu_unenroll.png",
-      
-    }
-  },
   "triggers": [
     {
       "type": "timing",
