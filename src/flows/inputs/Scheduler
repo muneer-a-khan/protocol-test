@@ -1,0 +1,10 @@
+{
+    "header_text": "Scheduler",
+    "elements": [
+        {
+            "type": "Scheduler",
+            "message": "This is a scheduler",
+            "name": "schedule_session"
+        }
+    ]
+}
