@@ -16,17 +16,19 @@ jobs:
                  uses: actions/checkout@v4
                - name: Install LibVips
                  run: |
-                   sudo apt update
-                   sudo apt install libvips-tools rename libjpeg-turbo8
+                   time ( \
+                     sudo apt update; \
+                     sudo apt install libvips-tools rename libjpeg-turbo8; \
+                   )
                  shell: bash
             
                - name: Resize images to optimized thumbnails
                  run: |
                    time ( \
-                   find ./src/* -name '*.jpeg' -size +100k | parallel vipsthumbnail "{}" --size 650x1300 --export-profile srgb -o tn_%s.jpeg[Q=70,profile=none,strip=true]; \
-                   find ./src/* -name '*.jpg' -size +100k | parallel vipsthumbnail "{}" --size 650x1300 --export-profile srgb -o tn_%s.jpg[Q=70,profile=none,strip=true]; \
-                   find ./src/* -name '*.png' -size +100k | parallel vipsthumbnail "{}" --size 650x1300 --export-profile srgb -o tn_%s.png[Q=70,profile=none,strip=true,compression=0]; \
-                   find ./src/* -name '*.gif' -size +100k | parallel vipsthumbnail "{}" --size 650x1300 --export-profile srgb -o tn_%s.gif[strip=true]; \
+                     find ./src/* -name '*.jpeg' -size +100k | parallel vipsthumbnail "{}" --size 650x1300 --export-profile srgb -o tn_%s.jpeg[Q=70,profile=none,strip=true]; \
+                     find ./src/* -name '*.jpg' -size +100k | parallel vipsthumbnail "{}" --size 650x1300 --export-profile srgb -o tn_%s.jpg[Q=70,profile=none,strip=true]; \
+                     find ./src/* -name '*.png' -size +100k | parallel vipsthumbnail "{}" --size 650x1300 --export-profile srgb -o tn_%s.png[Q=70,profile=none,strip=true,compression=0]; \
+                     find ./src/* -name '*.gif' -size +100k | parallel vipsthumbnail "{}" --size 650x1300 --export-profile srgb -o tn_%s.gif[strip=true]; \
                    )
                  shell: bash
             
@@ -40,8 +42,8 @@ jobs:
                - name: Rename all directories and files to lowercase
                  run: |
                    time ( \
-                   find ./src/* -depth -regex ".*[A-Z]+.*" -type d -exec rename -d 'y/A-Z/a-z/' {} \; \
-                   find ./src/* -depth -regex ".*[A-Z]+.*" -type f -exec rename -d 'y/A-Z/a-z/' {} \; \
+                     find ./src/* -depth -regex ".*[A-Z]+.*" -type d -exec rename -d 'y/A-Z/a-z/' {} \;; \
+                     find ./src/* -depth -regex ".*[A-Z]+.*" -type f -exec rename -d 'y/A-Z/a-z/' {} \;; \
                    )
                  shell: bash  
             
@@ -49,7 +51,7 @@ jobs:
                - name: Create release zip
                  run: |
                    cd ./src
-                   zip -r protocol.zip .
+                   time zip -r protocol.zip .
                  shell: bash
             
                - name: Upload release ZIP
