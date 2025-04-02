@@ -11,5 +11,47 @@ jobs:
   Release_Creation:
     runs-on: ubuntu-latest    
     steps:
-      - name: call workflow
-        uses: digital-trails/protocol-releaser@v1.3.0
+               - name: checkout
+                 uses: actions/checkout@v4
+               - name: Install LibVips
+                 run: |
+                   sudo apt update
+                   sudo apt install libvips-tools rename libjpeg-turbo8
+                 shell: bash
+            
+               - name: Resize images to optimized thumbnails
+                 run: |
+                   time ( \
+                   find ./src/* -name '*.jpeg' -size +100k | parallel vipsthumbnail "{}" --size 650x1300 --export-profile srgb -o tn_%s.jpeg[Q=70,profile=none,strip=true]; \
+                   find ./src/* -name '*.jpg' -size +100k | parallel vipsthumbnail "{}" --size 650x1300 --export-profile srgb -o tn_%s.jpg[Q=70,profile=none,strip=true]; \
+                   find ./src/* -name '*.png' -size +100k | parallel vipsthumbnail "{}" --size 650x1300 --export-profile srgb -o tn_%s.png[Q=70,profile=none,strip=true,compression=0]; \
+                   find ./src/* -name '*.gif' -size +100k | parallel vipsthumbnail "{}" --size 650x1300 --export-profile srgb -o tn_%s.gif[strip=true]; \
+                   )
+                 shell: bash
+            
+               - name: Replace images with their thumbnails
+                 run: |
+                   time find ./src/* -type f -name tn_* -exec rename -f -d 's/tn_//' {} \;
+                 shell: bash
+            
+            # This conflicts with Selection Flows but is necessary due to git's handling of capitalization
+            # making it impossible for protocol creators to truly control the capitalization of their files.
+               - name: Rename all directories and files to lowercase
+                 run: |
+                   time ( \
+                   find ./src/* -depth -regex ".*[A-Z]+.*" -type d -exec rename -d 'y/A-Z/a-z/' {} \; \
+                   find ./src/* -depth -regex ".*[A-Z]+.*" -type f -exec rename -d 'y/A-Z/a-z/' {} \; \
+                   )
+                 shell: bash  
+            
+                # For zip -r to do what we want, it is necessary to change directory first
+               - name: Create release zip
+                 run: |
+                   cd ./src
+                   zip -r protocol.zip .
+                 shell: bash
+            
+               - name: Upload release ZIP
+                 uses: softprops/action-gh-release@v2
+                 with:
+                    files: ./src/protocol.zip
