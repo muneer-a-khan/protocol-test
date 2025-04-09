@@ -1,9 +1,14 @@
 {
   "navigation_condition": [
     {
-      "wait_for_time": 3
+      "type": "WaitForTime",
+      "adhoc": 3
     },
-    "wait_for_finished"
+    {
+      "type": "WaitForComplete",
+      
+    },
+    
   ],
   "header_text": "Demographics",
   "header_icon": "assets/subtitle.png",
