@@ -1,7 +1,4 @@
 {
-  "navigation_condition": [
-    "wait_for_click"
-  ],
   "header_text": "Demographics 1",
   "header_icon": "assets/subtitle.png",
   "elements": [
