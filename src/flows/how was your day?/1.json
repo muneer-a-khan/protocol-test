@@ -1,22 +1,21 @@
 {
   "navigation_conditions": [ {"wait_for_time": 3000 }, "wait_for_complete" ],
-  "header_text": "Demographics",
+  "header_text": "Mood Check",
   "header_icon": "assets/subtitle.png",
   "elements": [
     {
       "type": "Text",
-      "text": "What is your favorite color?"
+      "text": "How was your day?"
     },
     {
       "type": "Buttons",
       "buttons": [
-        "0::Red",
-        "1::Blue",
-        "2::Green",
+        "0::Great",
+        "1::Okay",
+        "2::Bad",
         "99::Prefer not to answer"
       ],
-      "selectable": true,
-      
+      "selectable": true
     }
   ]
 }
