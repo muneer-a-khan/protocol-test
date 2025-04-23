@@ -45,7 +45,7 @@
       "type": "timing",
       "action": "notification",
       "content": "flow://flows/how was your day?",
-      "frequency": "00:01:00"
+      "frequency": "00:0015:00"
     },
     {
       "type": "timing",
