@@ -14,7 +14,7 @@
       "action": "flow://flows/doses"
     },
     "button_tl": {
-      "text": "inputs",
+      "text": "inputs!",
       "icon": "/assets/home_mindtrails.png",
       "action": "flow://flows/inputs"
     },
