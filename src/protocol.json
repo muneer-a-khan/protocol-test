@@ -2,7 +2,7 @@
   "icon": "/assets/home_mindtrails.png",
   "home": {
     "title": "MindTrails",
-    "banner_text": "Understand Your Thinking. Feel Less Anxious.",
+    "banner_text": "Understand Your Thinking.",
     "banner_icon": "/assets/home_banner.png",
     "button_ls": {
       "text": "{0} Sessions Completed",
