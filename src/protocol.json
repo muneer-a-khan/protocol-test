@@ -8,7 +8,7 @@
         "title": "Alert title",
         "message": "Alert message",
         "icon": {
-          "url": "/icons/trails.png",
+          "url": "/assets/home_banner.png",
           "tint": false
         }
       },
