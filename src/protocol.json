@@ -202,6 +202,34 @@
           "text": "",
           "backgroundcolor": "",
           "markcompleted": false
+        },
+        {
+          "type": "alert",
+          "title": "Testung",
+          "message": "Alert message",
+          "icon": {
+            "url": "pi pi-info-circle",
+            "tint": true
+          },
+          "left": {
+            "text": "",
+            "icon": ""
+          },
+          "right": {
+            "text": "",
+            "icon": "",
+            "action": ""
+          },
+          "action": {
+            "text": "",
+            "action": ""
+          },
+          "actions": [],
+          "position": "left",
+          "goals": [],
+          "text": "",
+          "backgroundcolor": "",
+          "markcompleted": false
         }
       ]
     }
